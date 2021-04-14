@@ -1,0 +1,12 @@
+{
+    "name": "jimmitjoo/running-pace-calculator",
+    "description": "A running pace calculator.",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Jimmie Johansson",
+            "email": "jimmitjoo@gmail.com"
+        }
+    ],
+    "require": {}
+}
