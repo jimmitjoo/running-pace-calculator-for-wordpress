@@ -42,6 +42,15 @@ class Running_Pace_Calculator_Public
     private $version;
 
     /**
+     * The plugin options.
+     *
+     * @since    1.0.0
+     * @access   private
+     * @var      array $options
+     */
+    private $options;
+
+    /**
      * Initialize the class and set its properties.
      *
      * @param string $running_pace_calculator The name of the plugin.
@@ -106,8 +115,9 @@ class Running_Pace_Calculator_Public
 
     public function component_dom()
     {
+        $this->options = get_option('running_pace_calculator_metric');
         ?>
-        <div id="running-pace-calculator-component">
+        <div id="running-pace-calculator-component" data-metric="<?php if (isset($this->options['metric'])) : echo $this->options['metric']; endif; ?>">
             <h3><?php echo __('Calculate Your Running Pace', 'running-pace-calculator'); ?></h3>
             <p><?php echo __('Enter the duration and distance of your run.', 'running-pace-calculator'); ?></p>
             <fieldset class="time">
@@ -136,7 +146,11 @@ class Running_Pace_Calculator_Public
             <div class="distance">
                 <label for="distance"><?php echo __('Distance', 'running-pace-calculator'); ?>
                     <input type="number" min="0" max="9999" id="distance" name="distance" placeholder="10" value="10">
-                    kilometers
+                    <?php if (isset($this->options['metric']) && $this->options['metric'] == 'km') : ?>
+                        <span>kilometers</span>
+                    <?php else : ?>
+                        <span>miles</span>
+                    <?php endif; ?>
                 </label>
 
                 <div>
@@ -151,9 +165,13 @@ class Running_Pace_Calculator_Public
 
                 <div class="flex">
                     <span id="pace_hours"></span>
-                    <span id="pace_minutes">3:</span>
-                    <span id="pace_seconds">24</span>
-                    <span>/km</span>
+                    <span id="pace_minutes"></span>
+                    <span id="pace_seconds"></span>
+                    <?php if (isset($this->options['metric']) && $this->options['metric'] == 'km') : ?>
+                        <span>/km</span>
+                    <?php else : ?>
+                        <span>/mile</span>
+                    <?php endif; ?>
                 </div>
 
             </fieldset>

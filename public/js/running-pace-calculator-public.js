@@ -35,6 +35,8 @@
         if (runningPaceCalculatorComponent) {
             let listeners = [];
 
+            let metric = runningPaceCalculatorComponent.getAttribute('data-metric');
+
             let hours = document.getElementById('hours');
             let minutes = document.getElementById('minutes');
             let seconds = document.getElementById('seconds');
@@ -44,16 +46,28 @@
             let pace_minutes = document.getElementById('pace_minutes');
             let pace_seconds = document.getElementById('pace_seconds');
 
-            document.getElementById('mathonDistance').addEventListener('click', function() {
-                distance.value = 42.194988;
+            document.getElementById('mathonDistance').addEventListener('click', function () {
+                if (metric === 'km') {
+                    distance.value = 42.194988;
+                } else {
+                    distance.value = 26.21875;
+                }
                 paceCalculation();
             });
-            document.getElementById('halfMarathonDistance').addEventListener('click', function() {
-                distance.value = 21.097494;
+            document.getElementById('halfMarathonDistance').addEventListener('click', function () {
+                if (metric === 'km') {
+                    distance.value = 21.097494;
+                } else {
+                    distance.value = 13.109375;
+                }
                 paceCalculation();
             });
-            document.getElementById('tenKilometersDistance').addEventListener('click', function() {
-                distance.value = 10;
+            document.getElementById('tenKilometersDistance').addEventListener('click', function () {
+                if (metric === 'km') {
+                    distance.value = 10;
+                } else {
+                    distance.value = 6.21371192;
+                }
                 paceCalculation();
             });
 

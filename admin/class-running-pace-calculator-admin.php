@@ -136,6 +136,10 @@ class Running_Pace_Calculator_Admin
                 <?php submit_button(); ?>
             </form>
 
+            <section>
+                <p>To display this calculator on your website, simply use this shortcode: <code>[running-pace-calculator]</code>.</p>
+            </section>
+
         </div>
         <?php
     }
