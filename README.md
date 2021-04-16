@@ -1,6 +1,6 @@
-# WordPress Plugin Boilerplate
+# Running Pace Calculator for WordPress
 
-A standardized, organized, object-oriented foundation for building high-quality WordPress Plugins.
+This is a plugin that lets you add a running pace calculator on your WordPress website.
 
 ## Contents
 
