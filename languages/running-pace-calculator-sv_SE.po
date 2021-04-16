@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: Running Pace Calculator\n"
 "POT-Creation-Date: 2021-04-16 15:16+0200\n"
-"PO-Revision-Date: 2021-04-16 15:18+0200\n"
+"PO-Revision-Date: 2021-04-16 17:28+0200\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,7 +54,7 @@ msgstr "Ange varaktighet och avstånd för din löpning."
 
 #: public/class-running-pace-calculator-public.php:124
 msgid "Duration"
-msgstr "Varaktighet"
+msgstr "Tid"
 
 #: public/class-running-pace-calculator-public.php:128
 msgid "Hours"

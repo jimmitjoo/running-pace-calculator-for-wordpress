@@ -14,11 +14,9 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Running Pace Calculator
- * Plugin URI:        https://xn--lpning-wxa.se/
  * Description:       This is a running pace calculator for WordPress.
  * Version:           1.0.0
  * Author:            HACKson
- * Author URI:        https://xn--lpning-wxa.se/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       running-pace-calculator
