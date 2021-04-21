@@ -134,8 +134,8 @@
                         pace_seconds.innerText = secondPaceValue;
                     }
                 }
-
             }
+            paceCalculation();
         }
     });
 
